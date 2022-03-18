@@ -10,7 +10,7 @@ for i in json["values"]:
         new_content = content
         error_code = int(i["value"])
 
-        print("Error Code: %d" % (error_code))
+        #print("Error Code: %d" % (error_code))
 
         if error_code == 418 or error_code < 400 or error_code > 599:
             continue
@@ -35,5 +35,6 @@ for i in json["values"]:
         new_content = new_content.replace("$BODY_COLOR", body_color)
         with open(i["value"] + ".html", "w") as output_file:
             output_file.write(new_content)
+        print(f"ErrorDocument {error_code} /errors/{error_code}.html")
 
 
