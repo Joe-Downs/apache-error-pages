@@ -13,6 +13,9 @@ html{
 	height: 100vh;
 }
 
+h1 {
+    text-align: center;
+}
 .error-middle{
 	display: block;
 	vertical-align: middle;
